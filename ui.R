@@ -30,6 +30,8 @@ shinyUI(navbarPage("Coursera Data Products Project",
                h5('Your percent 10 year risk of a CVD event (coronary, cerebrovascular, or peripheral arterial disease or heart failure) is:'),
                #verbatimTextOutput("inputAge"),
                verbatimTextOutput("prediction"),
+               h5('Your "heart age" is approximately:'),
+               verbatimTextOutput("heart"),
                #TextOutput("prediction"),
                plotOutput('plot1')
               )
@@ -57,8 +59,12 @@ shinyUI(navbarPage("Coursera Data Products Project",
                      will have a CVD event within 10 years.'),
                    br(),
                    p('For information into how to improve your health, check out '),
-                   a("Nutrition Facts", href="http://nutritionfacts.org/video/how-to-prevent-high-blood-pressure-with-diet/")
-                   ),                
+                   a("Nutrition Facts", href="http://nutritionfacts.org/video/how-to-prevent-high-blood-pressure-with-diet/"),
+                   br(),br(),
+                   p('Source code is:'),
+                   a("here", href="https://github.com/ColinMWright/DataProductsApp")
+                   ),
+                 
                mainPanel(
                  h3('Graphs of blood pressure and HDL vs Risk'),
                  plotOutput('plot2'),
